@@ -1,0 +1,36 @@
+ul{
+    display: none;
+}
+
+input:checked ~ul{
+    display: block;
+}
+
+input{
+    display: none;
+}
+
+label{
+    color: $color_base;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    user-select: none;
+}
+
+li{
+    display: block;
+    background-color: $color_claro;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 0.5px $color_claro;
+    
+    a{
+        color: $color_tipografia1;
+        text-decoration: none;
+    }
+}

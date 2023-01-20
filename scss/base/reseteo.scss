@@ -1,0 +1,31 @@
+/*------Reseteo------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*------Diseño General------*/
+
+body{
+
+    /*---Fondo---*/
+    background-image: url(../../img/fondo_mobile_clarito.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @media(min-width: 768px){
+        background-image: url(../../img/fondo_desktop_clarito.jpg);
+    }
+
+    
+    /*---Tipografia---*/
+    font-family: $tipografia_texto;
+    color: $color_tipografia1;
+    font-size: 20px;
+
+}

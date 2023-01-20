@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*------Paleta de colores------*/
+/*------Tipografias------*/
+/*------Reseteo------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*------Diseño General------*/
+body {
+  /*---Fondo---*/
+  background-image: url(../../img/fondo_mobile_clarito.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*---Tipografia---*/
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: #000000;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url(../../img/fondo_desktop_clarito.jpg);
+  }
+}
+
+header {
+  height: 80px;
+  width: 100vw;
+  background-image: linear-gradient(#facea7, rgba(253, 244, 237, 0.6509803922));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.75;
+}
+header div h1 {
+  font-family: "Dancing Script", cursive;
+  color: #fefbf4;
+  font-size: 70px;
+}
+header div h2 {
+  font-family: "Amatic SC", cursive;
+  color: #b3723a;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+ul {
+  display: none;
+}
+
+input:checked ~ ul {
+  display: block;
+}
+
+input {
+  display: none;
+}
+
+label {
+  color: #fefbf4;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  user-select: none;
+}
+
+li {
+  display: block;
+  background-color: rgba(253, 244, 237, 0.6509803922);
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 0.5px rgba(253, 244, 237, 0.6509803922);
+}
+li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+footer {
+  height: 80px;
+  width: 100vw;
+  background-image: linear-gradient(rgba(236, 233, 216, 0.337254902), #ece9d8);
+  position: absolute;
+  bottom: 0;
+}
+
+.tarjeta {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+
+/*# sourceMappingURL=style.css.map */
