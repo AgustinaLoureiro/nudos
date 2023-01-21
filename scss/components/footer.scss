@@ -1,7 +1,65 @@
 footer{
-    height: 80px;
+
+    height: 150px;
     width: 100vw;
     background-image: linear-gradient($color_neutro_transparente, $color_neutro);
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "logo redes"
+    "logo suscripcion";
+
+    .logo{
+        h1{
+            color: $color_vivido
+        }
+    }
+
+    .arriba{
+        a{
+            color: $color_neutro;
+        }
+        color: $color_neutro;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 160px;
+        right: 10vw;
+        border: solid 0.5px;
+        border-radius: 5px;
+
+        :hover{
+            color: $color_vivido;
+        }
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        right: 10vw;
+        top: 10px;
+        
+        :hover{
+            color: $color_vivido;
+            scale: 1.2;
+        }
+    }
+
+    a{
+        color: $color_tipografia1;
+        text-decoration: none;
+    }
+
 }

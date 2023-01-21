@@ -18,7 +18,7 @@ body {
   background-attachment: fixed;
   /*---Tipografia---*/
   font-family: "Yanone Kaffeesatz", sans-serif;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.6117647059);
   font-size: 20px;
 }
 @media (min-width: 768px) {
@@ -28,16 +28,22 @@ body {
 }
 
 header {
-  height: 80px;
+  height: 120px;
   width: 100vw;
-  background-image: linear-gradient(#facea7, rgba(253, 244, 237, 0.6509803922));
+  background-image: linear-gradient(#facea7, #fdf4ed);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
 }
-header div {
+
+.logo {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -45,31 +51,67 @@ header div {
   align-items: center;
   line-height: 0.75;
 }
-header div h1 {
+.logo h1 {
   font-family: "Dancing Script", cursive;
   color: #fefbf4;
   font-size: 70px;
 }
-header div h2 {
+.logo h2 {
   font-family: "Amatic SC", cursive;
-  color: #b3723a;
+  color: rgba(155, 96, 44, 0.5058823529);
   font-size: 40px;
   font-weight: 100;
 }
 
-ul {
-  display: none;
+aside {
+  background-color: #fdf4ed;
+  width: 100vw;
+  height: 30px;
+  position: fixed;
+  top: 120px;
+  z-index: 0;
+}
+aside p {
+  height: 16px;
+  color: rgba(0, 0, 0, 0.6117647059);
+  overflow: hidden;
+  align-content: stretch;
+  left: 0%;
+  -webkit-animation-name: move;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: left;
+  -webkit-animation-timing-function: linear;
 }
 
-input:checked ~ ul {
+@-webkit-keyframes move {
+  0% {
+    margin-left: 500px;
+  }
+  100% {
+    margin-left: -500px;
+  }
+}
+nav :hover {
+  background-color: rgba(250, 206, 167, 0.3490196078);
+  border: solid #fefbf4 0.5px;
+  border-radius: 5px;
+}
+nav ul {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 10vw;
+  opacity: 100;
+  z-index: 100;
+}
+nav input:checked ~ ul {
   display: block;
 }
-
-input {
+nav input {
   display: none;
 }
-
-label {
+nav label {
   color: #fefbf4;
   box-sizing: border-box;
   display: inline-block;
@@ -79,26 +121,75 @@ label {
   text-align: center;
   user-select: none;
 }
-
-li {
+nav li {
   display: block;
-  background-color: rgba(253, 244, 237, 0.6509803922);
+  background-color: #fdf4ed;
   margin: 0;
   padding: 10px;
   list-style: none;
-  border-bottom: 0.5px rgba(253, 244, 237, 0.6509803922);
+  border-bottom: 0.5px #fdf4ed;
 }
-li a {
-  color: #000000;
+nav li :hover {
+  border-radius: 0;
+  border: none;
+}
+nav li a {
+  color: rgba(0, 0, 0, 0.6117647059);
   text-decoration: none;
 }
 
 footer {
-  height: 80px;
+  height: 150px;
   width: 100vw;
   background-image: linear-gradient(rgba(236, 233, 216, 0.337254902), #ece9d8);
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "logo redes" "logo suscripcion";
+}
+footer .logo h1 {
+  color: #facea7;
+}
+footer .arriba {
+  color: #ece9d8;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 160px;
+  right: 10vw;
+  border: solid 0.5px;
+  border-radius: 5px;
+}
+footer .arriba a {
+  color: #ece9d8;
+}
+footer .arriba :hover {
+  color: #facea7;
+}
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 10vw;
+  top: 10px;
+}
+footer .redes :hover {
+  color: #facea7;
+  scale: 1.2;
+}
+footer a {
+  color: rgba(0, 0, 0, 0.6117647059);
+  text-decoration: none;
 }
 
 .tarjeta {

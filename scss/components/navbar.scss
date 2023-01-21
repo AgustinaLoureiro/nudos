@@ -1,36 +1,57 @@
-ul{
-    display: none;
-}
+nav{
 
-input:checked ~ul{
-    display: block;
-}
+    :hover{
+        background-color: $color_vivido_transparente;
+        border: solid $color_base 0.5px;
+        border-radius: 5px;
 
-input{
-    display: none;
-}
-
-label{
-    color: $color_base;
-    box-sizing: border-box;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    user-select: none;
-}
-
-li{
-    display: block;
-    background-color: $color_claro;
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-    border-bottom: 0.5px $color_claro;
-    
-    a{
-        color: $color_tipografia1;
-        text-decoration: none;
     }
+
+    ul{
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 10vw;
+        opacity: 100;
+        z-index: 100;
+    }
+
+    input:checked ~ul{
+        display: block;
+    }
+
+    input{
+        display: none;
+    }
+
+    label{
+        color: $color_base;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        user-select: none;
+    }
+
+    li{
+        display: block;
+        background-color: $color_claro;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 0.5px $color_claro;
+        
+        :hover{
+            border-radius: 0;
+            border: none;
+        }
+        
+        a{
+            color: $color_tipografia1;
+            text-decoration: none;
+        }
+    }
+
 }

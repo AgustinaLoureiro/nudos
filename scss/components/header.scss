@@ -1,5 +1,5 @@
 header{
-    height: 80px;
+    height: 120px;
     width: 100vw;
     background-image: linear-gradient($color_vivido, $color_claro);
     display: flex;
@@ -7,25 +7,9 @@ header{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-        
-    div{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        line-height: 0.75;
-
-        h1{
-            font-family: $tipografia_logo1;
-            color: $color_base;
-            font-size: 70px;
-        }
-        h2{
-            font-family: $tipografia_logo2;
-            color: $color_tipografia2;
-            font-size: 40px;
-            font-weight: 100;
-        }
-    }
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 10px;
+    position: fixed;
+    top: 0;
 }
