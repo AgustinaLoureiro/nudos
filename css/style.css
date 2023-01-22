@@ -26,50 +26,18 @@ body {
     background-image: url(../../img/fondo_desktop_clarito.jpg);
   }
 }
-
-header {
-  height: 120px;
-  width: 100vw;
-  background-image: linear-gradient(#facea7, #fdf4ed);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10vw;
-  padding-left: 10vw;
-  padding-top: 10px;
-  position: fixed;
-  top: 0;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  line-height: 0.75;
-}
-.logo h1 {
-  font-family: "Dancing Script", cursive;
-  color: #fefbf4;
-  font-size: 70px;
-}
-.logo h2 {
-  font-family: "Amatic SC", cursive;
-  color: rgba(155, 96, 44, 0.5058823529);
-  font-size: 40px;
-  font-weight: 100;
+body main {
+  position: relative;
+  top: 160px;
 }
 
 aside {
   background-color: #fdf4ed;
   width: 100vw;
   height: 30px;
-  position: fixed;
+  position: relative;
   top: 120px;
-  z-index: 0;
+  z-index: 10;
 }
 aside p {
   height: 16px;
@@ -92,6 +60,46 @@ aside p {
     margin-left: -500px;
   }
 }
+header {
+  height: 120px;
+  width: 100vw;
+  background-image: linear-gradient(#facea7, #fdf4ed);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.75;
+}
+.logo h1 {
+  font-family: "Dancing Script", cursive;
+  color: #fefbf4;
+  font-size: 70px;
+}
+.logo h2 {
+  font-family: "Amatic SC", cursive;
+  color: rgba(155, 96, 44, 0.5058823529);
+  font-size: 40px;
+  font-weight: 100;
+}
+
+nav {
+  z-index: 100;
+}
 nav :hover {
   background-color: rgba(250, 206, 167, 0.3490196078);
   border: solid #fefbf4 0.5px;
@@ -103,7 +111,6 @@ nav ul {
   top: 80px;
   right: 10vw;
   opacity: 100;
-  z-index: 100;
 }
 nav input:checked ~ ul {
   display: block;
@@ -139,19 +146,21 @@ nav li a {
 }
 
 footer {
-  height: 150px;
+  height: 40px;
   width: 100vw;
   background-image: linear-gradient(rgba(236, 233, 216, 0.337254902), #ece9d8);
-  position: fixed;
+  position: relative;
   bottom: 0;
   padding-right: 10vw;
   padding-left: 10vw;
   padding-top: 10px;
   padding-bottom: 100px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 40vw 60vw;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas: "logo redes" "logo suscripcion";
+}
+footer .logo {
+  scale: 0.7;
 }
 footer .logo h1 {
   color: #facea7;
@@ -164,7 +173,7 @@ footer .arriba {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 160px;
+  bottom: 120px;
   right: 10vw;
   border: solid 0.5px;
   border-radius: 5px;
@@ -188,18 +197,33 @@ footer .redes :hover {
   scale: 1.2;
 }
 footer a {
+  font-size: 1rem;
   color: rgba(0, 0, 0, 0.6117647059);
   text-decoration: none;
 }
 
-.tarjeta {
+section {
+  height: 550px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+section img {
   height: 300px;
   width: 300px;
-  background-color: red;
+  border: solid #fefbf4 10px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
+}
+section p {
+  font-family: "Dancing Script", cursive;
+  text-align: right;
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

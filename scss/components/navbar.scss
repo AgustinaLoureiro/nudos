@@ -1,5 +1,5 @@
 nav{
-
+    z-index: 100;
     :hover{
         background-color: $color_vivido_transparente;
         border: solid $color_base 0.5px;
@@ -13,7 +13,6 @@ nav{
         top: 80px;
         right: 10vw;
         opacity: 100;
-        z-index: 100;
     }
 
     input:checked ~ul{

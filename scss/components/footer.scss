@@ -1,22 +1,21 @@
 footer{
 
-    height: 150px;
+    height: 40px;
     width: 100vw;
     background-image: linear-gradient($color_neutro_transparente, $color_neutro);
-    position: fixed;
+    position: relative;
     bottom: 0;
     padding-right: 10vw;
     padding-left: 10vw;
     padding-top: 10px;
     padding-bottom: 100px;
+    margin-top: 50px;
     
     display: grid;
     grid-template-columns: 40vw 60vw;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas: "logo redes"
-    "logo suscripcion";
 
     .logo{
+        scale: 0.7;
         h1{
             color: $color_vivido
         }
@@ -33,7 +32,7 @@ footer{
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom: 160px;
+        bottom: 120px;
         right: 10vw;
         border: solid 0.5px;
         border-radius: 5px;
@@ -58,6 +57,7 @@ footer{
     }
 
     a{
+        font-size: 1rem;
         color: $color_tipografia1;
         text-decoration: none;
     }

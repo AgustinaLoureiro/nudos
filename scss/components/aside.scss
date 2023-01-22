@@ -2,9 +2,9 @@ aside{
     background-color: $color_claro;
     width: 100vw;
     height: 30px;
-    position: fixed;
+    position: relative;
     top: 120px;
-    z-index: 0;
+    z-index: 10;
 
     p{
         height: 16px;
