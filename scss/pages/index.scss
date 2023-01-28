@@ -1,4 +1,4 @@
-section{
+.portada{
     height: 550px;
     width: 100vw;
     display: flex;
@@ -8,9 +8,9 @@ section{
     gap: 40px;
 
     img{
-        height: 300px;
+        height: 250px;
         width: 300px;
-        border: solid $color_base 10px;
+        border: solid $color_base 4px;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 150px;
@@ -22,5 +22,4 @@ section{
         text-align: right;
         font-size: 1.8rem;
     }
-
 }

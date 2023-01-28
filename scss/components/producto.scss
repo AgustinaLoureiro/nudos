@@ -1,0 +1,34 @@
+.producto{
+
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 15px;
+    
+    h4{
+        text-align: center;
+        color: $color_tipografia2;
+        font-size: 1.4rem;
+    }
+
+    img{
+        width: 150px;
+        border: solid $color_base 2px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 150px;
+        border-bottom-right-radius: 150px;
+    }
+
+    a{
+        width: 70px;
+        height: 30px;
+        text-decoration: none;
+        text-align: center;
+        color: $color_vivido;
+        border: solid $color_base 1px;
+        border-radius: 5px;
+    }
+
+}

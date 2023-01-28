@@ -2,18 +2,19 @@ aside{
     background-color: $color_claro;
     width: 100vw;
     height: 30px;
-    position: relative;
+    position: fixed;
     top: 120px;
     z-index: 10;
 
     p{
-        height: 16px;
+        height: 20px;
+        font-size: 1.2rem;
         color: $color_tipografia1;
         overflow: hidden;
         align-content: stretch;
         left: 0%;
         -webkit-animation-name: move;
-        -webkit-animation-duration: 20s;
+        -webkit-animation-duration: 40s;
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction: left;
         -webkit-animation-timing-function: linear;
@@ -22,9 +23,9 @@ aside{
 
 @-webkit-keyframes move {
     0% {
-        margin-left: 500px;
+        margin-left: 1000px;
     }
     100% {
-        margin-left: -500px;
+        margin-left: -1000px;
     }
 }

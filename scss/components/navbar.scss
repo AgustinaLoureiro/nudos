@@ -1,18 +1,29 @@
-nav{
+.menu{
     z-index: 100;
-    :hover{
-        background-color: $color_vivido_transparente;
-        border: solid $color_base 0.5px;
-        border-radius: 5px;
-
-    }
-
+    
     ul{
         display: none;
         position: absolute;
         top: 80px;
         right: 10vw;
-        opacity: 100;
+
+        li{
+            display: block;
+            background-color: $color_claro;
+            margin: 0;
+            padding: 10px;
+            list-style: none;
+            
+            a{
+                color: $color_tipografia1;
+                text-decoration: none;
+            }
+
+            :hover{
+                scale: 1.2;
+                color: $color_vivido;
+            }
+        }
     }
 
     input:checked ~ul{
@@ -25,32 +36,42 @@ nav{
 
     label{
         color: $color_base;
-        box-sizing: border-box;
         display: inline-block;
         width: 30px;
         height: 30px;
         line-height: 30px;
         text-align: center;
         user-select: none;
-    }
 
-    li{
-        display: block;
-        background-color: $color_claro;
-        margin: 0;
-        padding: 10px;
-        list-style: none;
-        border-bottom: 0.5px $color_claro;
-        
         :hover{
-            border-radius: 0;
-            border: none;
-        }
-        
-        a{
-            color: $color_tipografia1;
-            text-decoration: none;
+            scale: 1.5;
         }
     }
 
+}
+
+@media(min-width: 768px) {
+    .menu{
+        input{
+            display: none;
+        }
+        label{
+            display: none;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 15px;
+            position: unset;
+            :hover{
+                scale: 1.2;
+            }
+            
+            li{
+                background-color: inherit;
+            }
+            }
+    }    
 }

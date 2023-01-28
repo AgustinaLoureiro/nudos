@@ -12,25 +12,26 @@
 body{
 
     /*---Fondo---*/
-    background-image: url(../../img/fondo_mobile_clarito.jpg);
+    background-image: url(../../img/00a_fondo_mobile_clarito.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
     @media(min-width: 768px){
-        background-image: url(../../img/fondo_desktop_clarito.jpg);
+        background-image: url(../../img/00a_fondo_desktop_clarito.jpg);
     }
 
     
     /*---Tipografia---*/
     font-family: $tipografia_texto;
     color: $color_tipografia1;
-    font-size: 20px;
+    font-size: 1.2rem;
 
     main{
         position: relative;
         top: 160px;
+        bottom: 40px;
     }
 
 }

@@ -11,7 +11,7 @@
 /*------Diseño General------*/
 body {
   /*---Fondo---*/
-  background-image: url(../../img/fondo_mobile_clarito.jpg);
+  background-image: url(../../img/00a_fondo_mobile_clarito.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,34 +19,36 @@ body {
   /*---Tipografia---*/
   font-family: "Yanone Kaffeesatz", sans-serif;
   color: rgba(0, 0, 0, 0.6117647059);
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 @media (min-width: 768px) {
   body {
-    background-image: url(../../img/fondo_desktop_clarito.jpg);
+    background-image: url(../../img/00a_fondo_desktop_clarito.jpg);
   }
 }
 body main {
   position: relative;
   top: 160px;
+  bottom: 40px;
 }
 
 aside {
   background-color: #fdf4ed;
   width: 100vw;
   height: 30px;
-  position: relative;
+  position: fixed;
   top: 120px;
   z-index: 10;
 }
 aside p {
-  height: 16px;
+  height: 20px;
+  font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.6117647059);
   overflow: hidden;
   align-content: stretch;
   left: 0%;
   -webkit-animation-name: move;
-  -webkit-animation-duration: 20s;
+  -webkit-animation-duration: 40s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: left;
   -webkit-animation-timing-function: linear;
@@ -54,10 +56,10 @@ aside p {
 
 @-webkit-keyframes move {
   0% {
-    margin-left: 500px;
+    margin-left: 1000px;
   }
   100% {
-    margin-left: -500px;
+    margin-left: -1000px;
   }
 }
 header {
@@ -77,6 +79,13 @@ header {
   z-index: 50;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .logo {
   display: flex;
   flex-direction: column;
@@ -97,30 +106,38 @@ header {
   font-weight: 100;
 }
 
-nav {
+.menu {
   z-index: 100;
 }
-nav :hover {
-  background-color: rgba(250, 206, 167, 0.3490196078);
-  border: solid #fefbf4 0.5px;
-  border-radius: 5px;
-}
-nav ul {
+.menu ul {
   display: none;
   position: absolute;
   top: 80px;
   right: 10vw;
-  opacity: 100;
 }
-nav input:checked ~ ul {
+.menu ul li {
+  display: block;
+  background-color: #fdf4ed;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+.menu ul li a {
+  color: rgba(0, 0, 0, 0.6117647059);
+  text-decoration: none;
+}
+.menu ul li :hover {
+  scale: 1.2;
+  color: #facea7;
+}
+.menu input:checked ~ ul {
   display: block;
 }
-nav input {
+.menu input {
   display: none;
 }
-nav label {
+.menu label {
   color: #fefbf4;
-  box-sizing: border-box;
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -128,32 +145,41 @@ nav label {
   text-align: center;
   user-select: none;
 }
-nav li {
-  display: block;
-  background-color: #fdf4ed;
-  margin: 0;
-  padding: 10px;
-  list-style: none;
-  border-bottom: 0.5px #fdf4ed;
-}
-nav li :hover {
-  border-radius: 0;
-  border: none;
-}
-nav li a {
-  color: rgba(0, 0, 0, 0.6117647059);
-  text-decoration: none;
+.menu label :hover {
+  scale: 1.5;
 }
 
+@media (min-width: 768px) {
+  .menu input {
+    display: none;
+  }
+  .menu label {
+    display: none;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    position: unset;
+  }
+  .menu ul :hover {
+    scale: 1.2;
+  }
+  .menu ul li {
+    background-color: inherit;
+  }
+}
 footer {
   height: 40px;
   width: 100vw;
   background-image: linear-gradient(rgba(236, 233, 216, 0.337254902), #ece9d8);
-  position: relative;
+  position: absolute;
   bottom: 0;
   padding-right: 10vw;
   padding-left: 10vw;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 100px;
   margin-top: 50px;
   display: grid;
@@ -166,43 +192,127 @@ footer .logo h1 {
   color: #facea7;
 }
 footer .arriba {
-  color: #ece9d8;
   display: flex;
   width: 30px;
   height: 30px;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 120px;
+  position: absolute;
+  bottom: 65px;
   right: 10vw;
-  border: solid 0.5px;
-  border-radius: 5px;
-}
-footer .arriba a {
-  color: #ece9d8;
 }
 footer .arriba :hover {
+  scale: 1.5;
+}
+footer .arriba a {
+  font-size: 1.6rem;
+  text-decoration: none;
   color: #facea7;
 }
 footer .redes {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  z-index: 100;
   position: absolute;
   right: 10vw;
-  top: 10px;
 }
-footer .redes :hover {
+footer .redes label {
   color: #facea7;
-  scale: 1.2;
+  display: inline-block;
+  position: relative;
+  bottom: -50px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
 }
-footer a {
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.6117647059);
-  text-decoration: none;
+footer .redes label :hover {
+  scale: 1.5;
+}
+footer .redes ul {
+  display: none;
+  position: absolute;
+  right: 10vw;
+}
+footer .redes ul li {
+  display: block;
+  position: relative;
+  bottom: 205px;
+  right: -11vw;
+  background-color: #fdf4ed;
+  padding: 5px;
+  list-style: none;
+}
+footer .redes ul li :hover {
+  scale: 1.1;
+}
+footer .redes input:checked ~ ul {
+  display: block;
+}
+footer .redes input {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer .redes label {
+    display: none;
+  }
+  footer .redes ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 15px;
+    position: relative;
+    right: 10vw;
+    bottom: -250px;
+  }
+  footer .redes ul li {
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
 
-section {
+.tienda {
+  height: 450px;
+  min-width: 256px;
+  background-color: #ece9d8;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  padding: 20px;
+  gap: 50px;
+}
+
+.producto {
+  width: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 15px;
+}
+.producto h4 {
+  text-align: center;
+  color: rgba(155, 96, 44, 0.5058823529);
+  font-size: 1.4rem;
+}
+.producto img {
+  width: 150px;
+  border: solid #fefbf4 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+.producto a {
+  width: 70px;
+  height: 30px;
+  text-decoration: none;
+  text-align: center;
+  color: #facea7;
+  border: solid #fefbf4 1px;
+  border-radius: 5px;
+}
+
+.portada {
   height: 550px;
   width: 100vw;
   display: flex;
@@ -211,16 +321,16 @@ section {
   justify-content: flex-start;
   gap: 40px;
 }
-section img {
-  height: 300px;
+.portada img {
+  height: 250px;
   width: 300px;
-  border: solid #fefbf4 10px;
+  border: solid #fefbf4 4px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
 }
-section p {
+.portada p {
   font-family: "Dancing Script", cursive;
   text-align: right;
   font-size: 1.8rem;

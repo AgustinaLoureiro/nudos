@@ -1,13 +1,12 @@
 footer{
-
     height: 40px;
     width: 100vw;
     background-image: linear-gradient($color_neutro_transparente, $color_neutro);
-    position: relative;
+    position: absolute;
     bottom: 0;
     padding-right: 10vw;
     padding-left: 10vw;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 100px;
     margin-top: 50px;
     
@@ -22,44 +21,91 @@ footer{
     }
 
     .arriba{
-        a{
-            color: $color_neutro;
+        :hover{
+            scale: 1.5;
         }
-        color: $color_neutro;
+        a{
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: $color_vivido;
+        }
         display: flex;
         width: 30px;
         height: 30px;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        bottom: 120px;
+        position: absolute;
+        bottom: 65px;
         right: 10vw;
-        border: solid 0.5px;
-        border-radius: 5px;
-
-        :hover{
-            color: $color_vivido;
-        }
     }
 
     .redes{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        z-index: 100;
         position: absolute;
         right: 10vw;
-        top: 10px;
-        
-        :hover{
+
+        label{
             color: $color_vivido;
-            scale: 1.2;
+            display: inline-block;
+            position: relative;
+            bottom: -50px;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            :hover{
+                scale: 1.5;
+            }
         }
+
+        ul{
+            display: none;
+            position: absolute;
+            right: 10vw;
+
+            li{
+                display: block;
+                position: relative;
+                bottom: 205px;
+                right: -11vw;
+                background-color: $color_claro;
+                padding: 5px;
+                list-style: none;
+                :hover{
+                    scale: 1.1;
+                }
+            }
+        }
+
+        input:checked ~ul{
+            display: block;
+        }
+    
+        input{
+            display: none;
+        }
+
     }
 
-    a{
-        font-size: 1rem;
-        color: $color_tipografia1;
-        text-decoration: none;
+    @media (min-width: 768px){
+        .redes{
+            label{
+                display: none;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                gap: 15px;
+                position: relative;
+                right: 10vw;
+                bottom: -250px;
+                li{
+                    background-color: #ffffff00;
+                }                                       
+            }
+        }
     }
 
 }
