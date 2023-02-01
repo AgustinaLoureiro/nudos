@@ -313,12 +313,13 @@ footer .redes input {
 }
 
 .portada {
-  height: 550px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 50px;
   gap: 40px;
 }
 .portada img {
@@ -334,6 +335,35 @@ footer .redes input {
   font-family: "Dancing Script", cursive;
   text-align: right;
   font-size: 1.8rem;
+}
+
+.irashop {
+  width: 100vw;
+  background-color: #ece9d8;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.irashop a img {
+  width: 200px;
+}
+.irashop ul {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .irashop a {
+    display: none;
+  }
+  .irashop ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .irashop ul a img {
+    width: 150px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
