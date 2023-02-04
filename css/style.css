@@ -269,30 +269,19 @@ footer .redes input {
   }
 }
 
-.tienda {
-  height: 450px;
-  min-width: 256px;
-  background-color: #ece9d8;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  display: flex;
-  flex-direction: row;
-  overflow: scroll;
-  padding: 20px;
-  gap: 50px;
-}
-
 .producto {
-  width: 200px;
+  width: 250px;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   padding: 15px;
 }
-.producto h4 {
+.producto h5 {
+  height: 20px;
   text-align: center;
   color: rgba(155, 96, 44, 0.5058823529);
   font-size: 1.4rem;
+  overflow: hidden;
 }
 .producto img {
   width: 150px;
@@ -310,6 +299,20 @@ footer .redes input {
   color: #facea7;
   border: solid #fefbf4 1px;
   border-radius: 5px;
+}
+.producto .btn {
+  background-color: rgba(253, 244, 237, 0.6509803922);
+  position: relative;
+  bottom: -20px;
+  left: 30px;
+}
+.producto .seleccion {
+  background-color: #fefbf4;
+  border: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6117647059);
+  text-align: center;
 }
 
 .portada {
@@ -364,6 +367,22 @@ footer .redes input {
   .irashop ul a img {
     width: 150px;
   }
+}
+.tienda {
+  height: 450px;
+  min-width: 256px;
+  background-color: #ece9d8;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  padding: 20px;
+  gap: 60px;
+}
+
+.tienda::-webkit-scrollbar:vertical {
+  -webkit-appearance: none;
 }
 
 /*# sourceMappingURL=style.css.map */

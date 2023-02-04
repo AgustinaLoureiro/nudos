@@ -1,15 +1,17 @@
 .producto{
 
-    width: 200px;
+    width: 250px;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding: 15px;
-    
-    h4{
+
+    h5{
+        height: 20px;
         text-align: center;
         color: $color_tipografia2;
         font-size: 1.4rem;
+        overflow: hidden;
     }
 
     img{
@@ -29,6 +31,22 @@
         color: $color_vivido;
         border: solid $color_base 1px;
         border-radius: 5px;
+    }
+
+    .btn{
+        background-color: $color_claro_transparente;
+        position: relative;
+        bottom: -20px;
+        left: 30px;
+    }
+
+    .seleccion{
+        background-color: $color_base;
+        border: none;
+        font-family: $tipografia_texto;
+        font-size: 1rem;
+        color: $color_tipografia1;
+        text-align: center;
     }
 
 }
