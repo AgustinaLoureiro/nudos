@@ -26,12 +26,17 @@ body{
     /*---Tipografia---*/
     font-family: $tipografia_texto;
     color: $color_tipografia1;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
     main{
         position: relative;
         top: 160px;
         bottom: 40px;
+        h3{
+            font-size: 2rem;
+            text-align: center;
+            margin: 15px;
+        }
     }
 
 }

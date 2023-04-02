@@ -10,16 +10,40 @@
 
 @import "./components/navbar.scss";
 
-@import "./components/footer.scss";
+// @import "./components/footer.scss";
 
-@import "./components/producto.scss";
+// @import "./components/producto.scss";
 
-@import "./pages/index.scss";
+// @import "./pages/index.scss";
 
-@import "./pages/nudos.scss";
+// @import "./pages/nudos.scss";
 
-@import "./pages/tienda.scss";
+// @import "./pages/tienda.scss";
 
-@import "./pages/nosotros.scss";
+// @import "./pages/nosotros.scss";
 
-@import "./pages/contacto.scss";
+// @import "./pages/contacto.scss";
+
+#tarjetasTapices{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.tarjetaDeArticulo{
+    width: 80px;
+    height: auto;
+    border: 1px solid black;
+}
+.tarjetaDeArticulo__seleccion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjetaDeArticulo__seleccion strong{
+    flex-basis: 60%;
+}
+.contador{
+    flex-basis: 40%;
+    display: flex;
+}
